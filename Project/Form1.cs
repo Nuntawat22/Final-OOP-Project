@@ -29,7 +29,7 @@ namespace Project
                 tbPassword.Focus();
             }
 
-            // ใช้elseเพื่อเปิดให้เป็น Form ต่อไป
+            // ใช้ else เพื่อเปิดให้เป็น Form ต่อไป
             else
             {
                 this.Hide();
@@ -40,7 +40,7 @@ namespace Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }
