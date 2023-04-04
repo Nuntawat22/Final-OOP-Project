@@ -251,6 +251,7 @@
             button3.TabIndex = 14;
             button3.Text = " ล้าง";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // tbTable
             // 
@@ -279,6 +280,7 @@
             button1.TabIndex = 12;
             button1.Text = "เช็คอิน";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // tbMail
             // 
@@ -300,12 +302,17 @@
             // label3
             // 
             label3.AutoSize = true;
+            label3.BackColor = Color.LightGoldenrodYellow;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(45, 170);
+            label3.Location = new Point(45, 175);
             label3.Name = "label3";
-            label3.Size = new Size(55, 15);
-            label3.TabIndex = 11;
-            label3.Text = "วัน/เวลา :";
+            label3.Size = new Size(30, 15);
+            label3.TabIndex = 3;
+            label3.Text = "เวลา";
+            // 
+            // timer1
+            // 
+            timer1.Tick += timer1_Tick;
             // 
             // groupBox2
             // 
@@ -523,6 +530,7 @@
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Text = "Restaurant";
+            Load += Restaurant1_Load;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();

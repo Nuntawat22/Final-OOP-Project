@@ -17,6 +17,45 @@ namespace Project
             InitializeComponent();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            int RT = dataGridView1.Rows.Add();
+            dataGridView1.Rows[RT].Cells[0].Value = tbName.Text;
+            dataGridView1.Rows[RT].Cells[1].Value = tbNumber.Text;
+            dataGridView1.Rows[RT].Cells[2].Value = tbMail.Text;
+            dataGridView1.Rows[RT].Cells[3].Value = dateTimePicker1.Text;
+            dataGridView1.Rows[RT].Cells[4].Value = label3.Text;
+            dataGridView1.Rows[RT].Cells[5].Value = tbTable.Text;
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int numRows = dataGridView1.Rows.Count;
+            for (int i = 0; i < numRows; i++)
+            {
+                try
+                {
+                    int max = dataGridView1.Rows.Count - 1;
+                    dataGridView1.Rows.Remove(dataGridView1.Rows[max]);
+                }
+
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+
+
+
+            tbName.Text = "";
+            tbNumber.Text = "";
+            tbMail.Text = "";
+            tbTable.Text = "";
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
 
@@ -25,6 +64,7 @@ namespace Project
             restaurant.Show();
 
         }
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             this.tbTable.Text = "";
@@ -328,5 +368,15 @@ namespace Project
                 }
             }
         }
+        private void Restaurant1_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label3.Text = DateTime.Now.ToShortTimeString();
+        }
+
+        
     }
 }
