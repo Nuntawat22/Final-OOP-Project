@@ -1,8 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace Project
 {
-    public partial class Form1 : Form
+    public partial class Restaurant : Form
     {
-        public Form1()
+        public Restaurant()
         {
             InitializeComponent();
         }
@@ -11,35 +21,29 @@ namespace Project
         {
             if (tbName.Text == "")
             {
-                MessageBox.Show("��سҡ�͡Username");
+                MessageBox.Show("กรุณากรอก Username");
                 tbName.Focus();
             }
 
             else if (tbPassword.Text == "")
             {
-                MessageBox.Show("��سҡ�͡Password");
+                MessageBox.Show("กรุณากรอก Password");
                 tbPassword.Focus();
             }
 
-            
+
             if (tbName.Text != "TEST" || tbPassword.Text != "1234")
             {
-                MessageBox.Show("��سҡ�͡User���Password���١��ͧ");
+                MessageBox.Show("กรุณากรอกข้อมูลให้ถูกต้อง");
                 tbName.Focus();
                 tbPassword.Focus();
             }
-
             else
             {
                 this.Hide();
                 Restaurant1 restaurant = new Restaurant1();
                 restaurant.Show();
             }
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

@@ -114,7 +114,6 @@
             // 
             // pictureBox4
             // 
-            pictureBox4.BackgroundImage = Properties.Resources.Netflix;
             pictureBox4.Image = Properties.Resources.Padthai;
             pictureBox4.Location = new Point(205, 350);
             pictureBox4.Name = "pictureBox4";
