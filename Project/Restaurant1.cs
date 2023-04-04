@@ -58,11 +58,9 @@ namespace Project
 
         private void button4_Click(object sender, EventArgs e)
         {
-
-            this.Hide();
-            Restaurant2 restaurant = new Restaurant2();
-            restaurant.Show();
-
+                this.Hide();
+                Restaurant2 restaurant = new Restaurant2();
+                restaurant.Show();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -377,6 +375,6 @@ namespace Project
             label3.Text = DateTime.Now.ToShortTimeString();
         }
 
-        
+
     }
 }
