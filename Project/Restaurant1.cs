@@ -13,15 +13,13 @@ namespace Project
 {
     public partial class Restaurant1 : Form
     {
-        List<Restaurant> listRestaurant = new List<Restaurant>();
-        Restaurant selectedRestaurant;
 
         private Stream restaurantFilePath;
         public Restaurant1()
         {
             InitializeComponent();
         }
-        // กฟไกฟไกฟไฟไกฟกฟ
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -58,10 +56,9 @@ namespace Project
                     int max = dataGridView1.Rows.Count - 1;
                     dataGridView1.Rows.Remove(dataGridView1.Rows[max]);
                 }
-
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("ล้างเรียบร้อย");
+                    MessageBox.Show(ex.Message);
                 }
 
             }
@@ -80,13 +77,6 @@ namespace Project
             this.Hide();
             Restaurant2 restaurant = new Restaurant2();
             restaurant.Show();
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-
 
         }
 
@@ -401,9 +391,9 @@ namespace Project
 
         }
 
-        
 
-            private void timer1_Tick(object sender, EventArgs e)
+
+        private void timer1_Tick(object sender, EventArgs e)
         {
             label3.Text = DateTime.Now.ToShortTimeString();
         }
@@ -412,30 +402,6 @@ namespace Project
         {
             this.Close();
         }
-
-        /*private void SaveData()
-        {
-            string path = "data.txt";
-            using (StreamWriter writer = new StreamWriter(path))
-            {
-                foreach (DataGridViewRow row in dataGridView1.Rows)
-                {
-                    if (!row.IsNewRow)
-                    {
-
-                        string Name = row.Cells[0].Value.ToString();
-                        string CustomerNumber = row.Cells[1].Value.ToString();
-                        string Mail = row.Cells[2].Value.ToString();
-                        string Day = row.Cells[3].Value.ToString();
-                        string Time = row.Cells[4].Value.ToString();
-                        string Seat = row.Cells[5].Value.ToString();
-                        string line = string.Format("{0},{1},{2},{3},{4},{5}", Name, CustomerNumber, Mail, Day, Time, Seat); ;
-                        writer.WriteLine(line);
-
-                    }
-                }
-            }
-        }*/
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {

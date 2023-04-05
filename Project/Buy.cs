@@ -8,17 +8,17 @@ namespace Project
 {
     internal class Buy
     {
-        double total = 0;
-        public void Bill(double restaurant, double getmoney)
+        double totalPrice = 0;
+        public void Bill(double pay, double getmoney)
         {
-            this.total = getmoney - restaurant;
-            total += getmoney;
-            total += restaurant;
+
+            this.totalPrice = getmoney - pay;
+
         }
 
         public double restaurantBill()
         {
-            return total;
+            return totalPrice;
         }
     }
 }

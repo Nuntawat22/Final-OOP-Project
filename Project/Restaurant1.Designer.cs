@@ -32,15 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Restaurant1));
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
-            openToolStripMenuItem = new ToolStripMenuItem();
             saveToolStripMenuItem = new ToolStripMenuItem();
             dataGridView1 = new DataGridView();
-            Name = new DataGridViewTextBoxColumn();
-            CustomerNumber = new DataGridViewTextBoxColumn();
-            Email = new DataGridViewTextBoxColumn();
-            Day = new DataGridViewTextBoxColumn();
-            Time = new DataGridViewTextBoxColumn();
-            Seat = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column6 = new DataGridViewTextBoxColumn();
             dateTimePicker1 = new DateTimePicker();
             tbName = new TextBox();
             tbNumber = new TextBox();
@@ -48,7 +47,6 @@
             label2 = new Label();
             groupBox1 = new GroupBox();
             button5 = new Button();
-            button6 = new Button();
             button4 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -93,16 +91,10 @@
             // 
             // fileToolStripMenuItem
             // 
-            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { openToolStripMenuItem, saveToolStripMenuItem });
+            fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { saveToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             fileToolStripMenuItem.Size = new Size(37, 20);
             fileToolStripMenuItem.Text = "File";
-            // 
-            // openToolStripMenuItem
-            // 
-            openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(180, 22);
-            openToolStripMenuItem.Text = "Open";
             // 
             // saveToolStripMenuItem
             // 
@@ -113,44 +105,53 @@
             // 
             // dataGridView1
             // 
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.BackgroundColor = Color.LemonChiffon;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Name, CustomerNumber, Email, Day, Time, Seat });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
             dataGridView1.Location = new Point(500, 27);
             dataGridView1.Name = "dataGridView1";
+            dataGridView1.ReadOnly = true;
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(640, 243);
             dataGridView1.TabIndex = 1;
             // 
-            // Name
+            // Column1
             // 
-            Name.HeaderText = "ชื่อ";
-            Name.Name = "Name";
+            Column1.HeaderText = "ชื่อ";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
             // 
-            // CustomerNumber
+            // Column2
             // 
-            CustomerNumber.HeaderText = "เบอร์ลูกค้า";
-            CustomerNumber.Name = "CustomerNumber";
+            Column2.HeaderText = "เบอร์ลูกค้า";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
             // 
-            // Email
+            // Column3
             // 
-            Email.HeaderText = "อีเมล";
-            Email.Name = "Email";
+            Column3.HeaderText = "อีเมล";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
             // 
-            // Day
+            // Column4
             // 
-            Day.HeaderText = "วันที่";
-            Day.Name = "Day";
+            Column4.HeaderText = "วันที่";
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
             // 
-            // Time
+            // Column5
             // 
-            Time.HeaderText = "เวลา";
-            Time.Name = "Time";
+            Column5.HeaderText = "เวลา";
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
             // 
-            // Seat
+            // Column6
             // 
-            Seat.HeaderText = "โต๊ะอาหาร";
-            Seat.Name = "Seat";
+            Column6.HeaderText = "โต๊ะอาหาร";
+            Column6.Name = "Column6";
+            Column6.ReadOnly = true;
             // 
             // dateTimePicker1
             // 
@@ -200,7 +201,6 @@
             // 
             groupBox1.BackColor = Color.DarkSeaGreen;
             groupBox1.Controls.Add(button5);
-            groupBox1.Controls.Add(button6);
             groupBox1.Controls.Add(button4);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button3);
@@ -234,18 +234,6 @@
             button5.Text = "ออกจากโปรแกรม";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.Olive;
-            button6.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            button6.Location = new Point(45, 328);
-            button6.Name = "button6";
-            button6.Size = new Size(75, 59);
-            button6.TabIndex = 17;
-            button6.Text = "ลบ 1 ตาราง";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
             // 
             // button4
             // 
@@ -560,6 +548,7 @@
             Controls.Add(dataGridView1);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Name = "Restaurant1";
             Text = "Restaurant";
             Load += Restaurant1_Load;
             menuStrip1.ResumeLayout(false);
@@ -577,7 +566,6 @@
 
         private MenuStrip menuStrip1;
         private ToolStripMenuItem fileToolStripMenuItem;
-        private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripMenuItem saveToolStripMenuItem;
         private DataGridView dataGridView1;
         private DateTimePicker dateTimePicker1;
@@ -596,12 +584,6 @@
         private Button button3;
         private Button button1;
         private Button button4;
-        private DataGridViewTextBoxColumn Name;
-        private DataGridViewTextBoxColumn CustomerNumber;
-        private DataGridViewTextBoxColumn Email;
-        private DataGridViewTextBoxColumn Day;
-        private DataGridViewTextBoxColumn Time;
-        private DataGridViewTextBoxColumn Seat;
         private GroupBox groupBox2;
         private CheckBox checkBox16;
         private CheckBox checkBox15;
@@ -620,6 +602,11 @@
         private CheckBox checkBox3;
         private CheckBox checkBox9;
         private Button button5;
-        private Button button6;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
+        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn Column6;
     }
 }

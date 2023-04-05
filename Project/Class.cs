@@ -23,18 +23,5 @@ namespace Project
             this.seat = seat;
            
         }
-
-        public string Name { get => name; }
-
-        public string CustomerNumber { get => customerNumber; }
-
-        public string Mail { get => mail; }
-
-        public string Day { get => day; }
-
-        public int Time { get => time; }
-
-        public string Seat { get => seat; }
-
     }
 }

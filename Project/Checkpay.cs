@@ -11,13 +11,13 @@ namespace Project
         private string discountCode = string.Empty;
         private double minimunPrice;
 
-        public void open(double min)
+        public void create(double min)
         {
             this.minimunPrice = min;
             if (min > 0)
             {
 
-                this.minimunPrice = min - (this.minimunPrice * 0.15);
+                this.minimunPrice = min - (this.minimunPrice * 0.50);
 
             }
 

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Project.Buy">
+    <Position X="12" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Buy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Checkpay">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAABAAAAACAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Checkpay.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Class">
+    <Position X="10.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAhAAAAIAAAAADAAAAAwAQAAAAEAAAAAAAAAQAAAQE=</HashCode>
+      <FileName>Class.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Restaurant">
+    <Position X="15" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAEABAAAACAAAACAAAYAAAAAGAAAAAEAAA=</HashCode>
+      <FileName>Restaurant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Restaurant1">
+    <Position X="17.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>RQQAACiEICCEARGCgCCAwAQGAMg5YgAAEnAOAAXYBwA=</HashCode>
+      <FileName>Restaurant1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Project.Restaurant2">
+    <Position X="20" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>/yAAIhAAASAACRGAEACBAAhCsMB8ggASWmD+IQVAJLA=</HashCode>
+      <FileName>Restaurant2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

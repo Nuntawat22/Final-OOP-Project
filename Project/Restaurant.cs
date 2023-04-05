@@ -32,7 +32,7 @@ namespace Project
             }
 
 
-            if (tbName.Text != "TEST" || tbPassword.Text != "1234")
+            if (tbName.Text != "t" || tbPassword.Text != "1")
             {
                 MessageBox.Show("กรุณากรอกข้อมูลให้ถูกต้อง");
                 tbName.Focus();
