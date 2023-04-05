@@ -12,31 +12,42 @@
  Class Diagram
  ```mermaid
 classDiagram
-  direction LR
-  class form1{
+  direction RT
+  class Restaurant{
+  -login():void
+}
+class Restaurant1{
   -cheakin():void
   -cheaout():void
   -Save():void
   -Clear():void
+  -fooditems():void
+  -exitProgram():void
 }
-  class Pay{
+  class Restaurant2{
   -discountcode():void
   -pay():void
   -back():void
   }
-  class codepay{
+  class Checkpay{
   -discountCode:string
   -minimumPice:double
   +creat(double min):void
-  +getCoupon():void
+  +getDiscount():void
   }
   class Buy{
   -totalPice:double
-  +Bill(restaurant double,getmoney Double):void
-  +payBill():double
+  +Bill(double pay, double getmoney):void
+  +restaurantBill():double
    }
-   Pay -- coderestaurant
+   class Class{
+   -name, customerNumber, mail, day, seat:string
+   -time:int
+   +Class(string name, string cutomerNumber, string mail, string day, int time, string seat)
+   }
+   Pay -- Checkpay
    Pay -- Buy
+   Pay -- Class
    
   ```
  4.ชื่อของผู้พัฒนาโปรแกรม
