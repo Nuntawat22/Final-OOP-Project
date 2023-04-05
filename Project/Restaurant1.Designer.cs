@@ -47,6 +47,8 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
+            button5 = new Button();
+            button6 = new Button();
             button4 = new Button();
             button2 = new Button();
             button3 = new Button();
@@ -99,14 +101,15 @@
             // openToolStripMenuItem
             // 
             openToolStripMenuItem.Name = "openToolStripMenuItem";
-            openToolStripMenuItem.Size = new Size(103, 22);
+            openToolStripMenuItem.Size = new Size(180, 22);
             openToolStripMenuItem.Text = "Open";
             // 
             // saveToolStripMenuItem
             // 
             saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            saveToolStripMenuItem.Size = new Size(103, 22);
+            saveToolStripMenuItem.Size = new Size(180, 22);
             saveToolStripMenuItem.Text = "Save";
+            saveToolStripMenuItem.Click += saveToolStripMenuItem_Click;
             // 
             // dataGridView1
             // 
@@ -196,6 +199,8 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.DarkSeaGreen;
+            groupBox1.Controls.Add(button5);
+            groupBox1.Controls.Add(button6);
             groupBox1.Controls.Add(button4);
             groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(button3);
@@ -218,10 +223,35 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "โปรดกรอกข้อมูล";
             // 
+            // button5
+            // 
+            button5.BackColor = Color.Firebrick;
+            button5.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.Location = new Point(257, 328);
+            button5.Name = "button5";
+            button5.Size = new Size(75, 59);
+            button5.TabIndex = 18;
+            button5.Text = "ออกจากโปรแกรม";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.Olive;
+            button6.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.Location = new Point(45, 328);
+            button6.Name = "button6";
+            button6.Size = new Size(75, 59);
+            button6.TabIndex = 17;
+            button6.Text = "ลบ 1 ตาราง";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
             // button4
             // 
-            button4.BackColor = Color.FromArgb(128, 255, 255);
-            button4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.BackColor = Color.DarkOrange;
+            button4.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = SystemColors.ActiveCaptionText;
             button4.Location = new Point(148, 328);
             button4.Name = "button4";
             button4.Size = new Size(75, 59);
@@ -233,18 +263,19 @@
             // button2
             // 
             button2.BackColor = Color.FromArgb(128, 255, 255);
-            button2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button2.Location = new Point(148, 252);
             button2.Name = "button2";
             button2.Size = new Size(75, 59);
             button2.TabIndex = 13;
-            button2.Text = "เช็คบิล";
+            button2.Text = "เช็คเอาท์";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
             button3.BackColor = Color.IndianRed;
-            button3.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button3.Location = new Point(257, 252);
             button3.Name = "button3";
             button3.Size = new Size(75, 59);
@@ -273,7 +304,7 @@
             // button1
             // 
             button1.BackColor = Color.Chartreuse;
-            button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(45, 252);
             button1.Name = "button1";
             button1.Size = new Size(75, 59);
@@ -588,5 +619,7 @@
         private CheckBox checkBox5;
         private CheckBox checkBox3;
         private CheckBox checkBox9;
+        private Button button5;
+        private Button button6;
     }
 }

@@ -33,21 +33,21 @@
             label1 = new Label();
             label2 = new Label();
             groupBox1 = new GroupBox();
-            button1 = new Button();
             button2 = new Button();
+            button1 = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // tbName
             // 
-            tbName.Location = new Point(128, 47);
+            tbName.Location = new Point(119, 47);
             tbName.Name = "tbName";
             tbName.Size = new Size(100, 23);
             tbName.TabIndex = 0;
             // 
             // tbPassword
             // 
-            tbPassword.Location = new Point(128, 76);
+            tbPassword.Location = new Point(119, 76);
             tbPassword.Name = "tbPassword";
             tbPassword.Size = new Size(100, 23);
             tbPassword.TabIndex = 1;
@@ -55,7 +55,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(10, 52);
+            label1.Location = new Point(48, 50);
             label1.Name = "label1";
             label1.Size = new Size(65, 15);
             label1.TabIndex = 2;
@@ -64,7 +64,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(10, 84);
+            label2.Location = new Point(48, 82);
             label2.Name = "label2";
             label2.Size = new Size(50, 15);
             label2.TabIndex = 3;
@@ -85,29 +85,31 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "เข้าสู่ระบบ";
             // 
+            // button2
+            // 
+            button2.Location = new Point(144, 124);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 31);
+            button2.TabIndex = 5;
+            button2.Text = "ออก";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // button1
             // 
-            button1.Location = new Point(25, 140);
+            button1.Location = new Point(38, 124);
             button1.Name = "button1";
-            button1.Size = new Size(75, 23);
+            button1.Size = new Size(75, 31);
             button1.TabIndex = 4;
             button1.Text = "ตกลง";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // button2
-            // 
-            button2.Location = new Point(144, 140);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 5;
-            button2.Text = "ออก";
-            button2.UseVisualStyleBackColor = true;
-            // 
             // Restaurant
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ActiveCaption;
             ClientSize = new Size(416, 317);
             Controls.Add(groupBox1);
             Name = "Restaurant";

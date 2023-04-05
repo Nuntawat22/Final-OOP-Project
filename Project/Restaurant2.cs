@@ -17,12 +17,23 @@ namespace Project
         {
             InitializeComponent();
         }
+        Checkpay checkpay = new Checkpay();
+        Buy seleManagemet = new Buy();
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
             Restaurant1 restaurant = new Restaurant1();
             restaurant.Show();
+        }
+
+        private void Discount_Click(object sender, EventArgs e)
+        {
+            string totaldiscount = this.textBox9.Text;
+            double discount = Convert.ToDouble(totaldiscount);
+            discount.open(Discount);
+
+            double totalDiscount = discount.getDiscount();
         }
     }
 }
