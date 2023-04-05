@@ -25,17 +25,17 @@ classDiagram
   -back():void
   }
   class codepay{
-  -couponCode:string
+  -discountCode:string
   -minimumPice:double
   +creat(double min):void
   +getCoupon():void
   }
   class Buy{
   -totalPice:double
-  +Bill(pay double,getmoney Double):void
+  +Bill(restaurant double,getmoney Double):void
   +payBill():double
    }
-   Pay -- codepay
+   Pay -- coderestaurant
    Pay -- Buy
    
   ```
