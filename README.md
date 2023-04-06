@@ -40,14 +40,14 @@ class Restaurant1{
   +Bill(double pay, double getmoney):void
   +restaurantBill():double
    }
-   class Class{
+   class Information{
    -name, customerNumber, mail, day, seat:string
    -time:int
    +Class(string name, string cutomerNumber, string mail, string day, int time, string seat)
    }
    Pay -- Checkpay
    Pay -- Buy
-   Pay -- Class
+   Pay -- Information
    
   ```
  4.ชื่อของผู้พัฒนาโปรแกรม
