@@ -11,14 +11,16 @@ using System.Windows.Forms;
 
 namespace Project
 {
+
     public partial class Restaurant1 : Form
     {
-
-        private Stream restaurantFilePath;
+        //private Stream restaurantFilePath;
         public Restaurant1()
         {
             InitializeComponent();
+            
         }
+        //Information C = new Information();
 
         private void button1_Click(object sender, EventArgs e)
         {

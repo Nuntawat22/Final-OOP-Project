@@ -17,6 +17,7 @@ namespace Project
         public Restaurant2()
         {
             InitializeComponent();
+
         }
         Checkpay discount = new Checkpay();
         Buy seleManagement = new Buy();
